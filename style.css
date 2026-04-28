@@ -1,62 +1,346 @@
-body {
-  margin: 0;
-  font-family: serif;
-  background: #fff8f3;
-  color: #4a1f1f;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-header {
-  background: #6d1022;
-  color: white;
-  text-align: center;
-  padding: 20px;
+html{
+  scroll-behavior:smooth;
 }
 
-header p {
-  color: gold;
+body{
+  font-family: Georgia, serif;
+  background:#fff8f3;
+  color:#3b1a1f;
+  line-height:1.6;
 }
 
-.hero {
-  text-align: center;
-  padding: 80px 20px;
+/* Header */
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#6f1025;
+  color:white;
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:2px solid #d4af37;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: gold;
-  color: #4a1f1f;
-  text-decoration: none;
-  border-radius: 20px;
+.logo-wrap{
+  display:flex;
+  align-items:center;
+  gap:15px;
 }
 
-.collections {
-  padding: 40px;
-  text-align: center;
+.logo-circle{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#f7d979,#b88917);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
+.logo-wrap h1{
+  font-size:28px;
 }
 
-.grid div {
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+.logo-wrap p{
+  color:#f6d679;
+  font-style:italic;
 }
 
-.contact {
-  background: #6d1022;
-  color: white;
-  text-align: center;
-  padding: 40px;
+nav{
+  display:flex;
+  gap:25px;
+  align-items:center;
 }
 
-footer {
-  text-align: center;
-  padding: 10px;
+nav a{
+  color:white;
+  text-decoration:none;
+  font-size:15px;
+}
+
+.nav-btn{
+  background:#d4af37;
+  color:#4a1f1f;
+  padding:10px 18px;
+  border-radius:30px;
+  font-weight:bold;
+}
+
+/* Hero */
+.hero{
+  position:relative;
+  height:90vh;
+  background:
+    linear-gradient(rgba(30,10,10,.45), rgba(30,10,10,.55)),
+    url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1600&auto=format&fit=crop')
+    center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:90%;
+  max-width:850px;
+}
+
+.tag{
+  display:inline-block;
+  color:#f5d88a;
+  margin-bottom:20px;
+  letter-spacing:1px;
+}
+
+.hero h2{
+  font-size:58px;
+  line-height:1.1;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:20px;
+  margin-bottom:35px;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  padding:14px 28px;
+  border-radius:40px;
+  font-weight:bold;
+}
+
+.gold{
+  background:#d4af37;
+  color:#4a1f1f;
+}
+
+.outline{
+  border:2px solid white;
+  color:white;
+}
+
+/* Sections */
+section{
+  padding:80px 8%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.section-title span{
+  color:#9d6c1e;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:14px;
+}
+
+.section-title h3{
+  font-size:42px;
+  margin-top:10px;
+}
+
+/* Collection */
+.collection-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.img{
+  height:280px;
+  background-size:cover;
+  background-position:center;
+}
+
+.bridal{
+  background-image:url('https://images.unsplash.com/photo-1583391733981-849cf6f52c41?q=80&w=1000&auto=format&fit=crop');
+}
+
+.saree{
+  background-image:url('https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=1000&auto=format&fit=crop');
+}
+
+.reception{
+  background-image:url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1000&auto=format&fit=crop');
+}
+
+.festive{
+  background-image:url('https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?q=80&w=1000&auto=format&fit=crop');
+}
+
+.card h4{
+  padding:20px 20px 8px;
+  font-size:24px;
+}
+
+.card p{
+  padding:0 20px 25px;
+  color:#666;
+}
+
+/* About */
+.about{
+  background:#6f1025;
+  color:white;
+}
+
+.about-box{
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+}
+
+.about span{
+  color:#f5d88a;
+}
+
+.about h3{
+  font-size:42px;
+  margin:15px 0;
+}
+
+.about p{
+  font-size:18px;
+}
+
+/* Instagram */
+.insta-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.insta-grid div{
+  height:260px;
+  border-radius:18px;
+  background:
+    linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.15)),
+    url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1000&auto=format&fit=crop')
+    center/cover;
+}
+
+/* Visit */
+.visit{
+  text-align:center;
+  background:#fff1e6;
+}
+
+.visit h3{
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+.visit p{
+  margin-bottom:30px;
+  font-size:18px;
+}
+
+/* Floating */
+.floating{
+  position:fixed;
+  right:25px;
+  bottom:25px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  padding:15px 22px;
+  border-radius:50px;
+  font-weight:bold;
+  box-shadow:0 10px 20px rgba(0,0,0,.2);
+  z-index:999;
+}
+
+/* Footer */
+footer{
+  background:#2a0d11;
+  color:white;
+  text-align:center;
+  padding:40px 20px;
+}
+
+footer h4{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+footer p{
+  color:#f5d88a;
+  margin-bottom:10px;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .header{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+  }
+
+  .hero h2{
+    font-size:40px;
+  }
+
+  .insta-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .hero h2{
+    font-size:30px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .section-title h3,
+  .about h3,
+  .visit h3{
+    font-size:30px;
+  }
+
+  .insta-grid{
+    grid-template-columns:1fr;
+  }
 }
