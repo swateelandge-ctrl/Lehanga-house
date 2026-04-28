@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: serif;
+  background: #fff8f3;
+  color: #4a1f1f;
+}
+
+header {
+  background: #6d1022;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header p {
+  color: gold;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: gold;
+  color: #4a1f1f;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.collections {
+  padding: 40px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.grid div {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.contact {
+  background: #6d1022;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+}
